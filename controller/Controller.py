@@ -26,13 +26,21 @@ class Controller:
         self.read_command()
     
     def read_command(self):
-        self.inputView.go_stop()
-
-        self.roll()
+        command = self.inputView.go_stop()
+        if(command == 'Go'):
+            self.roll()
+        else:
+            self.change_turn()
     
     def roll(self):
         new_dice = Dice.Dice()
         new_dice.roll()
         self.user.set_score(new_dice.get_number())
         
+        print('\n')
         self.outputView.print_current_score(self.user)
+
+        return self.print_current_status()
+    
+    def change_turn(self):
+        print('상대방 차례입니다')
