@@ -19,3 +19,13 @@ class InputView:
             if choice.lower() == 'go' or choice.lower() == 'exit':
                 return choice
             print('Go 혹은 Exit를 입력해주세요.')
+
+    def retry():
+        while True:
+            choice = input("게임 재시작을 원하면 'Retry'를, 종료를 원하면 'Exit'을 입력해주세요: ")
+            if choice.lower() == 'retry' or choice.lower() == 'exit':
+                if choice.lower() == 'retry':
+                    return 1
+                else:
+                    return 0
+            print('Retry 혹은 Exit를 입력해주세요.')
