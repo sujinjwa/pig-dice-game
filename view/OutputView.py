@@ -1,3 +1,5 @@
+from model import User, Player
+
 class OutputView:
     def print_start_message(self):
         print('주사위 게임을 시작합니다')

@@ -1,5 +1,4 @@
 class Player:
-
     def __init__(self):
         self.score = 0
         self.tmp_score = 0

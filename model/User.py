@@ -1,12 +1,12 @@
-import Player
-
+from Player import *
 
 class User(Player):
-    
-    def __init__(self, username):
+    def __init__(self):
         Player.__init__(self)
-        self.username = username
+        self.username = ''
 
-    def my_name(self):
+    def set_name(self, name):
+        self.username = name
+
+    def get_name(self):
         return self.username
-    
