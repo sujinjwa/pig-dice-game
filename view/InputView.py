@@ -8,4 +8,3 @@ class InputView:
                 continue
             except ValueError:
                 return username
-
