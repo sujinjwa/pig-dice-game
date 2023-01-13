@@ -10,13 +10,18 @@ class OutputView:
     def print_fail_message(self):
         print('안타깝네요. 컴퓨터가 이겼습니다..')
     
-    def print_total_score(self, user_score, computer_score):
+    def print_total_score(self, user, computer):
+        user_score = user.get_score()
+        computer_score = computer.get_score()
         print(f'[ Sujin Jo의 최종 점수: {user_score} | 상대방(컴퓨터)의 최종 점수: {computer_score} ]')
     
-    def print_current_total_score(self, player_name, total_score):
+    def print_current_total_score(self, user):
+        player_name = user.get_name()
+        total_score = user.get_tmp_score()
         print(f'[ 이번 턴의 {player_name}의 점수 : {total_score} ]')
     
-    def print_current_score(self, score):
+    def print_current_score(self, user):
+        score = user.get_tmp_score()
         print(f'{score}점이 나왔습니다!')
 
     def print_reset_message(self):
