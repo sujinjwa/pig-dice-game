@@ -1,8 +1,8 @@
-import Player
+from Player import *
 from random import randint
 
 
-class Computer(Player):
+class Computer(layer):
 
     def __init__(self):
         Player.__init__(self)
