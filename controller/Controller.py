@@ -12,5 +12,5 @@ class Controller:
         self.read_username()
     
     def read_username(self):
-        self.username = self.inputView.username()
+        self.username = self.inputView.validate_username()
         
