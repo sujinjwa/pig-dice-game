@@ -3,10 +3,10 @@ class Player:
         self.score = 0
         self.tmp_score = 0
 
-    def my_score(self):
+    def get_score(self):
         return self.score
     
-    def my_tmp_score(self):
+    def get_tmp_score(self):
         return self.tmp_score
 
     def reset_tmp_score(self):
@@ -16,4 +16,4 @@ class Player:
         self.score = 0
     
     def add_score(self):
-        self.score += self. tmp_score
+        self.score += self.tmp_score

@@ -1,5 +1,5 @@
 from view import OutputView, InputView
-from model import Dice, User, Computer, Player
+from model import Dice, User, Computer
 
 class Controller:
     def __init__(self):
@@ -15,11 +15,11 @@ class Controller:
     
     def read_username(self):
         username = self.inputView.validate_username()
-        # username을 User 에 넘겨주기
+        self.user.set_name(username)
 
         self.roll()
     
     def roll(self):
         new_dice = Dice.Dice()
         new_dice.roll()
-        print(new_dice.get_number())
+    
