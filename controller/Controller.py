@@ -1,9 +1,16 @@
-from view import OutputView
+from view import OutputView, InputView
 
 class Controller:
     def __init__(self):
-        pass
+        self.outputView = OutputView.OutputView()
+        self.inputView = InputView.InputView()
+        self.username = ''
 
     def play(self):
-        outputView = OutputView.OutputView()
-        outputView.print_start_message()
+        self.outputView.print_start_message()
+
+        self.read_username()
+    
+    def read_username(self):
+        self.username = self.inputView.validate_username()
+        
