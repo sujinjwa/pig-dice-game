@@ -10,6 +10,9 @@ class User():
     def get_name(self):
         return self.username
     
+    def set_score(self, score):
+        self.tmp_score += score
+    
     def get_score(self):
         return self.score
     
